@@ -1,6 +1,7 @@
 import axios from "axios";
+const url = process.env.REACT_APP_Backend;
 
-const backendUrl = `http://localhost:3005/api/v1/auth`;;
+const backendUrl = `${url}/auth`;
 
 export const registerAdmin = async ({ email, password, name }) => {
     try {

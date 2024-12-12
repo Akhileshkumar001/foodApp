@@ -48,7 +48,9 @@
 
 
 import React, { createContext, useState, useEffect, useReducer, useContext } from 'react';
+const url = process.env.REACT_APP_Backend;
 
+const backendUrl = `${url}`;
 export const FoodContext = createContext();
 
 export const FoodProvider = ({ children }) => {
@@ -60,7 +62,7 @@ export const FoodProvider = ({ children }) => {
     useEffect(() => {
         const fetchFoodItems = async () => {
             try {
-                const response = await fetch('http://localhost:3005/foodItems');
+                const response = await fetch(`${backendUrl}/foodItems`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -75,7 +77,7 @@ export const FoodProvider = ({ children }) => {
 
         const fetchFoodCat = async () => {
             try {
-                const response = await fetch('http://localhost:3005/foodCategories');
+                const response = await fetch(`${backendUrl}/foodCategories`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

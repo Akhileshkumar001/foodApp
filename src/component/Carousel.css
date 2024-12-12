@@ -1,0 +1,64 @@
+/* Carousel.css */
+ 
+/* .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    height: 100vh; 
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: brightness(30%); 
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    text-align: center;
+  } 
+   
+    */
+
+    /* Carousel.css */
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    height: 100vh; /* Adjust this based on your needs */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    filter: brightness(30%); /* Apply brightness filter */
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px; /* Adjust this based on where you want the caption */
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  

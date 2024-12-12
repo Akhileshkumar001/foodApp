@@ -1,0 +1,139 @@
+/* Home.css */
+/* .main-content {
+    padding-top: 70px; 
+  } */
+  
+  /* Add responsive adjustments if needed */
+  /* @media (max-width: 992px) {
+    .main-content {
+      padding-top: 90px; 
+    }
+  } */
+
+
+  /* Ensure that the body and main container handle overflow */
+
+
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+.home-content {
+  padding: 20px;
+  min-height: 100vh; 
+  box-sizing: border-box; 
+}
+
+.container {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+  .home-content {
+      padding: 10px;
+  }
+}
+
+   */
+
+
+   .home-container {
+    font-family: 'Arial', sans-serif;
+}
+
+.bgImageCard {
+    height: 100vh;
+    background-image: url('../image/pizza-ready-for-baking.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introCard {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.iCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hh1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.btnBox {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background-color: #F7115F;
+    border: 2px solid #F7115F;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    color: #F7115F;
+}
+
+.showMoreBtn {
+    background: transparent;
+    color: #F7115F;
+}
+
+.home-content {
+    /* padding: 2rem; */
+    background-color: #f4f4f4;
+}
+
+/* .container {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+} */
+
+@media only screen and (max-width: 850px) {
+    .bgImageCard {
+        height: 80vh;
+    }
+    .hh1 {
+        font-size: 2rem;
+    }
+    .btnBox {
+        flex-direction: column;
+    }
+    .btn {
+        margin-bottom: 1rem;
+    }
+}

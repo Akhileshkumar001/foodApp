@@ -1,0 +1,135 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eef0ef;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  max-width: 650px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.signup, .login {
+  font-size: 1rem;
+  color: #6e6e6e;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.signup:hover, .login:hover {
+  color: #F7115F;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 1rem;
+  background-color: rgb(248, 248, 248);
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #F7115F;
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  height: 45px;
+  border-radius: 2rem;
+  background-color: #F7115F;
+  color: #ffffff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.Toastify__toast--success {
+  background-color: #28a745;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+      padding: 30px 15px;
+  }
+
+  .heading {
+      font-size: 1.5rem;
+  }
+
+  .signup, .login {
+      font-size: 0.9rem;
+      margin: 0 10px;
+  }
+
+  .input {
+      height: 40px;
+  }
+
+  .button {
+      height: 40px;
+      font-size: 0.9rem;
+  }
+}

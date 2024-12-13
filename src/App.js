@@ -41,6 +41,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from 'react';
 import Cart from './screens/MyCart.js';
 import Order from './screens/Order.js';
+import Card from './component/Cardss.js';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
             <Route exact path='/Cart' element={<Cart/>}  />
             <Route exact path='/Search' element={<Search/>}  />
             <Route exact path='/Order' element={<Order/>}  />
+            <Route exact path='/card' element={<Card/>}/>
             
           </Routes>
         </div>

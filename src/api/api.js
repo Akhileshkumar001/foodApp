@@ -1,11 +1,9 @@
 import axios from "axios";
-const url = process.env.REACT_APP_Backend;
-
-const backendUrl = `${url}/auth`;
+const BackendUrl = process.env.REACT_APP_Backend;
 
 export const registerAdmin = async ({ email, password, name }) => {
     try {
-        const reqUrl = `${backendUrl}/signUp`; // Ensure the endpoint matches
+        const reqUrl = `${BackendUrl}/auth/signUp`; 
         console.log("Request URL:", reqUrl);
         
         const response = await axios.post(reqUrl, {
@@ -24,7 +22,7 @@ export const registerAdmin = async ({ email, password, name }) => {
 
 export const loginAdmin = async ({ email, password }) => {
     try {
-        const reqUrl = `${backendUrl}/login`;
+        const reqUrl = `${BackendUrl}/auth/login`;
         const response = await axios.post(reqUrl, {
             password,
             email,
@@ -44,7 +42,7 @@ export const loginAdmin = async ({ email, password }) => {
 
 export const submitContactForm = async ({ name, email, howDidYouFindUs, message, termsAccepted }) => {
     try {
-        const reqUrl = `${backendUrl}/submit`; // Ensure the endpoint matches your backend route
+        const reqUrl = `${BackendUrl}/auth/submit`; // Ensure the endpoint matches your backend route
         console.log("Request URL:", reqUrl);
         
         const response = await axios.post(reqUrl, {

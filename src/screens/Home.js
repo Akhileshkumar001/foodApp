@@ -256,8 +256,7 @@ export default function Home() {
                 </div>
             </div>
             {isLoggedIn ? (
-                <div className="container">
-                    
+                <div className="container"> 
                     <Cards />
                 </div>
             ) : (

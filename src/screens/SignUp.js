@@ -1,76 +1,3 @@
-// import React, { useState } from 'react';
-// import { registerAdmin } from '../api/api';
-
-// export default function SignUp() {
-//     const [data, setData] = useState({
-//         Name: "",
-//         Email: "",
-//         Password: ""
-//     });
-
-//     const handleOnChange = (e) => {
-//         setData({ ...data, [e.target.name]: e.target.value });
-//     }
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         console.log("Submitting user data:", data);
-//         const result = await registerAdmin(data);
-//         if (result) {
-//             console.log("Registration successful:", result);
-//         }
-//     }
-
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <div className="form-group">
-//                 <label htmlFor="name">Name</label>
-//                 <input 
-//                     type="text" 
-//                     className="form-control" 
-//                     id="name" 
-//                     name="Name" 
-//                     value={data.Name} 
-//                     onChange={handleOnChange} 
-//                     placeholder="Enter Name" 
-//                 />
-//             </div>
-//             <div className="form-group">
-//                 <label htmlFor="email">Email address</label>
-//                 <input 
-//                     type="email" 
-//                     className="form-control" 
-//                     id="email" 
-//                     name="Email" 
-//                     value={data.Email} 
-//                     onChange={handleOnChange} 
-//                     placeholder="Enter email" 
-//                 />
-//             </div>
-//             <div className="form-group">
-//                 <label htmlFor="password">Password</label>
-//                 <input 
-//                     type="password" 
-//                     className="form-control" 
-//                     id="password" 
-//                     name="Password" 
-//                     value={data.Password} 
-//                     onChange={handleOnChange} 
-//                     placeholder="Password" 
-//                 />
-//             </div>
-//             <div className="form-group form-check">
-//                 <input 
-//                     type="checkbox" 
-//                     className="form-check-input" 
-//                     id="exampleCheck1" 
-//                 />
-//                 <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-//             </div>
-//             <button type="submit" className="btn btn-primary">Submit</button>
-//         </form>
-//     );
-// }
    
 import { useState } from 'react';
 import { registerAdmin } from '../api/api';
@@ -129,7 +56,7 @@ function SignUp() {
     if (result) {
       notify();
       setTimeout(() => {
-        navigate('/lgoin');
+        navigate('/login');
       }, 1500);
     }
   };

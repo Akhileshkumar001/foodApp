@@ -7,8 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import './MyCarts.css';
 
 const Cart = () => {
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
     const cart = useCart();
+    console.log("cartIem",cart);
+    
     const dispatch = useDispatchCart();
 
     const handleRemove = (index) => {
@@ -20,13 +22,13 @@ const Cart = () => {
     };
 
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-    // const handleProceedToCheckout = () => {
-    //     if (cart.length > 0) {
-    //         navigate('/Order'); // Navigate to Order component
-    //     } else {
-    //         alert("Your cart is empty.");
-    //     }
-    // };
+    const handleProceedToCheckout = () => {
+        if (cart.length > 0) {
+            navigate('/Order'); // Navigate to Order component
+        } else {
+            alert("Your cart is empty.");
+        }
+    };
 
     return (
         <div className="container mt-5">
@@ -66,7 +68,7 @@ const Cart = () => {
                                     Clear Cart
                                 </button>
                                 <Link to="/Order">
-                                    <button className="btn btn-success">Proceed to Checkout</button>
+                                    <button className="btn btn-success" onClick={handleProceedToCheckout}>Proceed to Checkout</button>
                                 </Link>
                             </div>
                         </div>

@@ -1,56 +1,6 @@
-
-
-// import React, { useReducer, useContext } from 'react';
-
-// const CartStateContext = React.createContext();
-// const CartDispatchContext = React.createContext();
-
-// const reducer = (state, action) => {
-//     switch (action.type) {
-//         case "ADD":
-//             const newState = [...state, { 
-//                 id: action.id, 
-//                 name: action.name, 
-//                 price: action.price, 
-//                 qty: action.qty, 
-//                 size: action.size 
-//             }];
-//             localStorage.setItem('cart', JSON.stringify(newState));
-//             return newState;
-//         case "REMOVE":
-//             const updatedState = state.filter((_, index) => index !== action.index);
-//             localStorage.setItem('cart', JSON.stringify(updatedState));
-//             return updatedState;
-//         case "CLEAR":
-//             localStorage.removeItem('cart');
-//             return [];
-//         default:
-//             console.log("Error in reducer");
-//             return state;
-//     }
-// }
-
-
-// export const CartProvider = ({ children }) => {
-//     const [state, dispatch] = useReducer(reducer, []);
-
-//     return (
-//         <CartStateContext.Provider value={state}>
-//             <CartDispatchContext.Provider value={dispatch}>
-//                 {children}
-//             </CartDispatchContext.Provider>
-//         </CartStateContext.Provider>
-//     );
-// };
-
-// export const useCart = () => useContext(CartStateContext);
-// export const useDispatchCart = () => useContext(CartDispatchContext);
-
-
 import React, { createContext, useState, useEffect, useReducer, useContext } from 'react';
-const url = process.env.REACT_APP_Backend;
+const backendUrl = process.env.REACT_APP_Backend;
 
-const backendUrl = `${url}`;
 export const FoodContext = createContext();
 
 export const FoodProvider = ({ children }) => {
@@ -67,6 +17,8 @@ export const FoodProvider = ({ children }) => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
+                console.log("foodItem",data);
+                
                 setFoodItems(data);
                 setLoading(false);
             } catch (error) {

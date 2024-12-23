@@ -8,6 +8,8 @@ import { useCart, useDispatchCart } from './ContextReducer'; // Adjust import pa
 
 const Card = () => {
   const { foodItems, foodCat, loading, error } = useContext(FoodContext);
+  console.log("fooditems",foodItems);
+  
   const dispatch = useDispatchCart();
   const cartData = useCart();
 
@@ -72,7 +74,6 @@ const Card = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  // Get distinct categories
   const categories = [...new Set(foodItems.map(item => item.CategoryName))];
 
   return (

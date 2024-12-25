@@ -6,8 +6,8 @@ import SignupStyle from './Signup.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-
 function SignUp() {
+  
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",

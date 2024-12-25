@@ -3,6 +3,10 @@ const BackendUrl = process.env.REACT_APP_Backend;
 
 export const registerAdmin = async ({ email, password, name }) => {
     try {
+        console.log("email",email);
+        console.log("password",password);
+        
+        
         const reqUrl = `${BackendUrl}/auth/signUp`; 
         console.log("Request URL:", reqUrl);
         
@@ -11,8 +15,11 @@ export const registerAdmin = async ({ email, password, name }) => {
             password,
             email,
         });
+        console.log("user name",response);
 
         return response;
+        
+        
 
     } catch (error) {
         console.log("Error in API call:", error);

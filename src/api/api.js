@@ -1,35 +1,41 @@
 import axios from "axios";
-const BackendUrl = process.env.REACT_APP_Backend;
-
-export const registerAdmin = async ({ email, password, name }) => {
+const backendUrl = process.env.REACT_APP_Backend;
+export const registerAdmin = async ({ email, password , username})=>{
     try {
-        console.log("email",email);
-        console.log("password",password);
+       
         
-        
-        const reqUrl = `${BackendUrl}/auth/signUp`; 
+        // "https://food-app-backend-lemon.vercel.app/api/v1"
+        // http://localhost:3005/api/v1/auth/signUp
+        const reqUrl = `${backendUrl}/auth/signUp`; 
         console.log("Request URL:", reqUrl);
         
         const response = await axios.post(reqUrl, {
-            name,
+            username,
             password,
             email,
         });
-        console.log("user name",response);
+        console.log("usermessage", response.data);
 
-        return response;
-        
-        
-
-    } catch (error) {
+        return response.data; 
+      } catch (error) {
         console.log("Error in API call:", error);
-        throw error;
-    }
-};
+    
+        
+        if (error.response && error.response.data && error.response.data.message) {
+          return { errorMessage: error.response.data.message }; 
+        }
+    
+        return { errorMessage: "An unknown error occurred." };
+      }
+    };
+        
+        
+
+
 
 export const loginAdmin = async ({ email, password }) => {
     try {
-        const reqUrl = `${BackendUrl}/auth/login`;
+        const reqUrl = `${backendUrl}/auth/login`;
         const response = await axios.post(reqUrl, {
             password,
             email,
@@ -49,7 +55,7 @@ export const loginAdmin = async ({ email, password }) => {
 
 export const submitContactForm = async ({ name, email, howDidYouFindUs, message, termsAccepted }) => {
     try {
-        const reqUrl = `${BackendUrl}/auth/submit`; // Ensure the endpoint matches your backend route
+        const reqUrl = `${backendUrl}/auth/submit`; // Ensure the endpoint matches your backend route
         console.log("Request URL:", reqUrl);
         
         const response = await axios.post(reqUrl, {

@@ -99,6 +99,11 @@
 .Toastify__toast--error {
   background-color: #dc3545;
 }
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 @media only screen and (max-width: 768px) {
   .main {
